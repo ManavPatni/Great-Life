@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Great Life</string>
+
+    <!-- Slogans/Taglines  -->
+    <string name="stressed_question">Struggling with studies?\nKick off stress with simple activities.</string>
+    <string name="app_message">Introducing Great Life, your ultimate health and wellness companion for students! Access mental health resources, track fitness, discover healthy eating guides, and join a vibrant community. Elevate your college experience with Great Life – your guide to a balanced and thriving student life!</string>
+
+    <!-- Main Activity -->
+    <string name="welcome_back">Welcome back,</string>
+    <string name="how_you_feel">How Do You Feel Today?</string>
+    <string name="angry">Angry</string>
+    <string name="sad">Sad</string>
+    <string name="neutral">Neutral</string>
+    <string name="good">Good</string>
+    <string name="happy">Happy</string>
+
+
+</resources>

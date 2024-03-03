@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "326019375681",
+    "project_id": "great-life-a7229",
+    "storage_bucket": "great-life-a7229.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:326019375681:android:9863a2c8aff3dc13db9cc0",
+        "android_client_info": {
+          "package_name": "com.thecodeproject.in.greatlife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "326019375681-ldn0q1ivp0pbieecem27v1i1ko9opnm9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thecodeproject.in.greatlife",
+            "certificate_hash": "185e4e9592d4fb818370fca609cd01661c3a6b47"
+          }
+        },
+        {
+          "client_id": "326019375681-svgglnfbllbv70cur3bmjllcbli7okr7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDViUZSeXTODS1I_M65mdupfgk0iNwTiqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "326019375681-svgglnfbllbv70cur3bmjllcbli7okr7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
