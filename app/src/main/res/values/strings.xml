@@ -13,6 +13,10 @@
     <string name="neutral">Neutral</string>
     <string name="good">Good</string>
     <string name="happy">Happy</string>
+    <string name="featuredActivities">Featured Activities</string>
+    <string name="meditation">Meditation</string>
+    <string name="meditationMessage">Meditation reduces stress, enhances focus, and promotes well-being, fostering mental and physical health benefits.</string>
+    <string name="meditationTime">10 – 15 minutes</string>
 
 
 </resources>
