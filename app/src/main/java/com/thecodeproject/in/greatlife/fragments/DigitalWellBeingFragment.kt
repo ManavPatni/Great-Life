@@ -75,7 +75,6 @@ class DigitalWellBeingFragment : Fragment() {
             endTime
         ).sumBy { it.totalTimeInForeground.toInt() }.toLong()
     }
-
     private fun getAppUsageList(): List<String> {
         val usageStatsManager = requireContext().getSystemService(Context.USAGE_STATS_SERVICE) as android.app.usage.UsageStatsManager
         val endTime = System.currentTimeMillis()
