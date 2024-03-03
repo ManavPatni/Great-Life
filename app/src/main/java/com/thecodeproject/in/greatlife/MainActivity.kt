@@ -35,7 +35,8 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(DigitalWellBeingFragment())
                 }
                 "Communities" -> {
-                    //startActivity(Intent(this,SellEWasteActivity::class.java))
+                    //startActivity(Intent(this,PhysicalFitnessActivity::class.java))
+                    startActivity(Intent(this,FoodActivity::class.java))
                 }}
             return@setOnItemSelectedListener true
         }
