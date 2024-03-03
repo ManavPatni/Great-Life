@@ -17,6 +17,15 @@
     <string name="meditation">Meditation</string>
     <string name="meditationMessage">Meditation reduces stress, enhances focus, and promotes well-being, fostering mental and physical health benefits.</string>
     <string name="meditationTime">10 – 15 minutes</string>
+    <string name="yoga">Yoga</string>
+    <string name="yogaMessage">Yoga combines breath, movement, and meditation for holistic well-being, fostering physical and mental harmony.</string>
+    <string name="yogaTime">10 – 15 minutes</string>
+    <string name="sleepSound">Sleep Sound</string>
+    <string name="sleepSoundMessage">Yoga combines breath, movement, and meditation for holistic well-being, fostering physical and mental harmony.</string>
+    <string name="sleepSoundTime">5 – 10 minutes</string>
+    <string name="mentalWellbeing">Mental Wellbeing</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>
