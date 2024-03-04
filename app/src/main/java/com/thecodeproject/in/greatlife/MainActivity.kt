@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
                 }
                 "Communities" -> {
                     //startActivity(Intent(this,PhysicalFitnessActivity::class.java))
-                    startActivity(Intent(this,FoodActivity::class.java))
                 }}
             return@setOnItemSelectedListener true
         }

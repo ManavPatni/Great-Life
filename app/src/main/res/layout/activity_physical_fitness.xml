@@ -42,7 +42,8 @@
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
                 app:lottie_autoPlay="true"
-                app:lottie_loop="true"/>
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/exercise"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -69,7 +70,8 @@
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
                 app:lottie_autoPlay="true"
-                app:lottie_loop="true"/>
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/steps"/>
 
             <TextView
                 android:layout_width="match_parent"

@@ -26,12 +26,33 @@
         app:layout_constraintTop_toBottomOf="@+id/et_number" />
 
     <EditText
+        android:id="@+id/maxFat"
         android:layout_width="@dimen/_200sdp"
         android:layout_height="wrap_content"
-        android:hint="minProtein"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:hint="maxFat"
+        app:layout_constraintEnd_toEndOf="@+id/et_maxProtein"
+        app:layout_constraintStart_toStartOf="@+id/et_maxProtein"
+        app:layout_constraintTop_toBottomOf="@+id/et_maxProtein" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
 
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Recipe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/maxFat"
+        app:layout_constraintStart_toStartOf="@+id/maxFat"
+        app:layout_constraintTop_toBottomOf="@+id/maxFat" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

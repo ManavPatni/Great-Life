@@ -8,7 +8,6 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.airbnb.lottie.LottieAnimationView;
 import com.thecodeproject.in.greatlife.physicalFitness.ExerciseActivity;
 import com.thecodeproject.in.greatlife.physicalFitness.StepCounterActivity;
 

@@ -24,8 +24,9 @@
     <string name="sleepSoundMessage">Yoga combines breath, movement, and meditation for holistic well-being, fostering physical and mental harmony.</string>
     <string name="sleepSoundTime">5 – 10 minutes</string>
     <string name="mentalWellbeing">Mental Wellbeing</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="food">Food Nutrition</string>
+    <string name="foodMessage">A proper diet is very important for physical and mental harmony.</string>
+    <string name="foodTime">5 – 10 minutes</string>
 
 
 </resources>

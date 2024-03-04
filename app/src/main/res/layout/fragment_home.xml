@@ -175,61 +175,11 @@
                        android:orientation="horizontal">
 
                        <com.google.android.material.card.MaterialCardView
-                           android:id="@+id/cv_meditation"
+                           android:id="@+id/cv_Nutrition"
                            android:layout_width="@dimen/_200sdp"
                            android:layout_height="@dimen/_260sdp"
                            android:layout_gravity="center_vertical"
-                           android:backgroundTint="#fff3f3"
-                           android:elevation="0dp">
-
-                           <LinearLayout
-                               android:layout_width="match_parent"
-                               android:layout_height="match_parent"
-                               android:orientation="vertical">
-
-                               <ImageView
-                                   android:layout_width="match_parent"
-                                   android:layout_height="@dimen/_120sdp"
-                                   android:src="@drawable/ic_meditation"
-                                   android:layout_marginTop="@dimen/_10sdp"/>
-
-                               <TextView
-                                   android:layout_width="match_parent"
-                                   android:layout_height="wrap_content"
-                                   android:text="@string/meditation"
-                                   android:textStyle="bold"
-                                   android:textColor="@color/black"
-                                   android:textSize="@dimen/_14ssp"
-                                   android:textAlignment="center"
-                                   android:layout_marginTop="@dimen/_10sdp"/>
-
-                               <TextView
-                                   android:layout_width="match_parent"
-                                   android:layout_height="wrap_content"
-                                   android:text="@string/meditationMessage"
-                                   android:layout_margin="@dimen/_5sdp"
-                                   android:textColor="@color/black"
-                                   android:textSize="@dimen/_13ssp"
-                                   android:textAlignment="center"/>
-
-                               <TextView
-                                   android:layout_width="match_parent"
-                                   android:layout_height="wrap_content"
-                                   android:text="@string/meditationTime"
-                                   android:textColor="@color/black"
-                                   android:textSize="@dimen/_12ssp"
-                                   android:textAlignment="center"
-                                   android:layout_marginTop="@dimen/_5sdp"/>
-
-                           </LinearLayout>
-
-                       </com.google.android.material.card.MaterialCardView>
-
-                       <com.google.android.material.card.MaterialCardView
-                           android:layout_width="@dimen/_200sdp"
-                           android:layout_height="@dimen/_260sdp"
-                           android:layout_gravity="center_vertical"
-                           android:backgroundTint="#fff4df"
+                           android:backgroundTint="#56BC7E8F"
                            android:elevation="0dp"
                            android:layout_marginStart="@dimen/_10sdp">
 
@@ -239,15 +189,16 @@
                                android:orientation="vertical">
 
                                <ImageView
-                                   android:layout_width="match_parent"
+                                   android:layout_width="@dimen/_150sdp"
                                    android:layout_height="@dimen/_120sdp"
-                                   android:src="@drawable/ic_yoga"
-                                   android:layout_marginTop="@dimen/_10sdp"/>
+                                   android:src="@drawable/ic_food"
+                                   android:layout_marginTop="@dimen/_10sdp"
+                                   android:layout_gravity="center_horizontal"/>
 
                                <TextView
                                    android:layout_width="match_parent"
                                    android:layout_height="wrap_content"
-                                   android:text="@string/yoga"
+                                   android:text="@string/food"
                                    android:textStyle="bold"
                                    android:textColor="@color/black"
                                    android:textSize="@dimen/_14ssp"
@@ -257,7 +208,7 @@
                                <TextView
                                    android:layout_width="match_parent"
                                    android:layout_height="wrap_content"
-                                   android:text="@string/yogaMessage"
+                                   android:text="@string/foodMessage"
                                    android:layout_margin="@dimen/_5sdp"
                                    android:textColor="@color/black"
                                    android:textSize="@dimen/_13ssp"
@@ -266,7 +217,7 @@
                                <TextView
                                    android:layout_width="match_parent"
                                    android:layout_height="wrap_content"
-                                   android:text="@string/yogaTime"
+                                   android:text="@string/foodTime"
                                    android:textColor="@color/black"
                                    android:textSize="@dimen/_12ssp"
                                    android:textAlignment="center"
@@ -320,6 +271,110 @@
                                    android:layout_width="match_parent"
                                    android:layout_height="wrap_content"
                                    android:text="@string/sleepSoundTime"
+                                   android:textColor="@color/black"
+                                   android:textSize="@dimen/_12ssp"
+                                   android:textAlignment="center"
+                                   android:layout_marginTop="@dimen/_5sdp"/>
+
+                           </LinearLayout>
+
+                       </com.google.android.material.card.MaterialCardView>
+
+                       <com.google.android.material.card.MaterialCardView
+                           android:id="@+id/cv_meditation"
+                           android:layout_width="@dimen/_200sdp"
+                           android:layout_height="@dimen/_260sdp"
+                           android:layout_gravity="center_vertical"
+                           android:backgroundTint="#fff3f3"
+                           android:elevation="0dp"
+                           android:layout_marginStart="@dimen/_10sdp">
+
+                           <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="match_parent"
+                               android:orientation="vertical">
+
+                               <ImageView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="@dimen/_120sdp"
+                                   android:src="@drawable/ic_meditation"
+                                   android:layout_marginTop="@dimen/_10sdp"/>
+
+                               <TextView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:text="@string/meditation"
+                                   android:textStyle="bold"
+                                   android:textColor="@color/black"
+                                   android:textSize="@dimen/_14ssp"
+                                   android:textAlignment="center"
+                                   android:layout_marginTop="@dimen/_10sdp"/>
+
+                               <TextView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:text="@string/meditationMessage"
+                                   android:layout_margin="@dimen/_5sdp"
+                                   android:textColor="@color/black"
+                                   android:textSize="@dimen/_13ssp"
+                                   android:textAlignment="center"/>
+
+                               <TextView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:text="@string/meditationTime"
+                                   android:textColor="@color/black"
+                                   android:textSize="@dimen/_12ssp"
+                                   android:textAlignment="center"
+                                   android:layout_marginTop="@dimen/_5sdp"/>
+
+                           </LinearLayout>
+
+                       </com.google.android.material.card.MaterialCardView>
+
+                       <com.google.android.material.card.MaterialCardView
+                           android:id="@+id/cv_yoga"
+                           android:layout_width="@dimen/_200sdp"
+                           android:layout_height="@dimen/_260sdp"
+                           android:layout_gravity="center_vertical"
+                           android:backgroundTint="#fff4df"
+                           android:elevation="0dp"
+                           android:layout_marginStart="@dimen/_10sdp">
+
+                           <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="match_parent"
+                               android:orientation="vertical">
+
+                               <ImageView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="@dimen/_120sdp"
+                                   android:src="@drawable/ic_yoga"
+                                   android:layout_marginTop="@dimen/_10sdp"/>
+
+                               <TextView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:text="@string/yoga"
+                                   android:textStyle="bold"
+                                   android:textColor="@color/black"
+                                   android:textSize="@dimen/_14ssp"
+                                   android:textAlignment="center"
+                                   android:layout_marginTop="@dimen/_10sdp"/>
+
+                               <TextView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:text="@string/yogaMessage"
+                                   android:layout_margin="@dimen/_5sdp"
+                                   android:textColor="@color/black"
+                                   android:textSize="@dimen/_13ssp"
+                                   android:textAlignment="center"/>
+
+                               <TextView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:text="@string/yogaTime"
                                    android:textColor="@color/black"
                                    android:textSize="@dimen/_12ssp"
                                    android:textAlignment="center"

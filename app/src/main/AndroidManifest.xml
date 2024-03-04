@@ -9,6 +9,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
 
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <uses-feature
         android:name="android.hardware.sensor.stepcounter"
         android:required="true" />
@@ -60,6 +63,21 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="General" />
+
+        <service
+            android:name=".notification.NotificationService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firbase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".notification.MyReceiver"/>
+
     </application>
 
 </manifest>
