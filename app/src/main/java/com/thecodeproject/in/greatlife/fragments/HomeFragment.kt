@@ -1,6 +1,9 @@
 package com.thecodeproject.`in`.greatlife.fragments
 
 import android.Manifest
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -11,7 +14,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.app.ActivityCompat
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.getSystemService
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.google.android.material.snackbar.Snackbar
@@ -34,6 +41,8 @@ class HomeFragment : Fragment() {
     //sign in pref
     private lateinit var signInPrefs: SignInSharedPreferenceHelper
 
+    private val CHANNEL_ID = "MyChannelID"
+    private val notificationId = 1
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -60,13 +69,29 @@ class HomeFragment : Fragment() {
             //.error(R.drawable.ic_guest) // Image to display in case of error
             .into(binding.ivUserPic)
 
+        createNotificationChannel()
 
         //how you feel
-        binding.tvAngry.setOnClickListener { showSnackBar("ohh noo..Lets make you happy!!") }
-        binding.tvSad.setOnClickListener { showSnackBar("ohh noo..Lets make you happy!!") }
-        binding.tvNeutral.setOnClickListener { showSnackBar("ohh...Lets make you happy!!") }
-        binding.tvGood.setOnClickListener { showSnackBar("nice...now make you happy!!") }
-        binding.tvHappy.setOnClickListener { showSnackBar("Wow!! great keep going...") }
+        binding.tvAngry.setOnClickListener {
+            showSnackBar("ohh noo..Lets make you happy!!")
+            sendNotification("Let's make you happy!!","Why don't you try meditation it will help you reduce you anger")
+        }
+        binding.tvSad.setOnClickListener {
+            showSnackBar("ohh noo..Lets make you happy!!")
+            sendNotification("Let's make you happy!!","Listen to interesting podcast!!")
+        }
+        binding.tvNeutral.setOnClickListener {
+            showSnackBar("ohh...Lets make you happy!!")
+            sendNotification("Let's make you happy!!","Yoga sa hi hoga 😊😊!!")
+        }
+        binding.tvGood.setOnClickListener {
+            showSnackBar("nice...now make you happy!!")
+            sendNotification("Let's make you happy!!","Yoga sa hi hoga 😊😊!!")
+        }
+        binding.tvHappy.setOnClickListener {
+            showSnackBar("Wow!! great keep going...")
+            sendNotification("Wooooow!!! happy!!","😊😊!!")
+        }
 
         //cv
         binding.cvNutrition.setOnClickListener { startActivity(Intent(requireContext(),FoodActivity::class.java)) }
@@ -113,4 +138,44 @@ class HomeFragment : Fragment() {
         }
     }
 
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name = "MyChannelName"
+            val descriptionText = "My notification channel description"
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val channel = NotificationChannel(CHANNEL_ID, name, importance).apply {
+                description = descriptionText
+            }
+
+            val notificationManager =
+               context?.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
+    }
+
+    private fun sendNotification(title: String, message: String) {
+        val builder = NotificationCompat.Builder(requireContext(), CHANNEL_ID)
+            .setSmallIcon(R.drawable.ic_happy)
+            .setContentTitle(title)
+            .setContentText(message)
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+
+        with(NotificationManagerCompat.from(requireContext())) {
+            if (ActivityCompat.checkSelfPermission(
+                    requireContext(),
+                    Manifest.permission.POST_NOTIFICATIONS
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                // TODO: Consider calling
+                //    ActivityCompat#requestPermissions
+                // here to request the missing permissions, and then overriding
+                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                //                                          int[] grantResults)
+                // to handle the case where the user grants the permission. See the documentation
+                // for ActivityCompat#requestPermissions for more details.
+                return
+            }
+            notify(notificationId, builder.build())
+        }
+    }
 }
